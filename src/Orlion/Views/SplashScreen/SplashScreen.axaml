@@ -1,0 +1,51 @@
+<Window
+    Background="Transparent"
+    Height="210"
+    SystemDecorations="None"
+    Title="Orlion"
+    TransparencyBackgroundFallback="Transparent"
+    TransparencyLevelHint="Transparent"
+    Width="380"
+    WindowStartupLocation="CenterScreen"
+    d:DesignHeight="210"
+    d:DesignWidth="380"
+    mc:Ignorable="d"
+    x:Class="Gml.Launcher.Views.SplashScreen.SplashScreen"
+    x:DataType="viewModels:SplashScreenViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:components="clr-namespace:Gml.Launcher.Views.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:Gml.Launcher.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border
+        Background="{DynamicResource FrameBackgroundColor}"
+        BorderBrush="{DynamicResource FrameBackgroundBorderColor}"
+        BorderThickness="1"
+        ClipToBounds="True"
+        CornerRadius="15">
+
+        <Grid>
+            <StackPanel VerticalAlignment="Center">
+                <components:LogoComponent Classes="TextLogo" HorizontalAlignment="Center" />
+
+                <ProgressBar
+                    Classes="ProgressBar"
+                    Height="1"
+                    IsIndeterminate="{Binding InfinityLoading}"
+                    Margin="60,20"
+                    Maximum="100"
+                    Value="{Binding Progress}"
+                    VerticalAlignment="Bottom" />
+
+                <TextBlock
+                    Foreground="{DynamicResource ContentColor}"
+                    HorizontalAlignment="Center"
+                    Text="{Binding StatusText}" />
+            </StackPanel>
+        </Grid>
+
+    </Border>
+
+</Window>

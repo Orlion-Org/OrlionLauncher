@@ -20,7 +20,7 @@ public class ProfileUserControl : ItemsControl
 
     public static readonly StyledProperty<string> UserNameProperty =
         AvaloniaProperty.Register<ProfileUserControl, string>(
-            nameof(UserName), "GamerVII");
+            nameof(UserName), "Orlion");
 
     public string UserName
     {

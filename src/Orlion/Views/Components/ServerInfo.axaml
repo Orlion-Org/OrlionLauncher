@@ -1,0 +1,96 @@
+﻿<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:Gml.Launcher.Views.Components"
+    xmlns:lang="clr-namespace:Gml.Launcher.Assets.Resources"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Background="{DynamicResource BackgroundColor}">
+            <controls:ServerInfo />
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="controls|ServerInfo">
+
+        <Setter Property="Spacing" Value="20" />
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="MaxWidth" Value="500" />
+        <Setter Property="Foreground" Value="{DynamicResource HeadlineColor}" />
+        <Setter Property="FontWeight" Value="Black" />
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel
+                    HorizontalAlignment="Left"
+                    Spacing="{TemplateBinding Spacing}"
+                    VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <controls:BadgeComponent
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Text="{TemplateBinding Status}" />
+                        <controls:BadgeComponent
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Text="{TemplateBinding Property=GameVersion}" />
+                        <controls:BadgeComponent
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Text="{TemplateBinding State}" />
+                        <!--  <controls:BadgeComponent Text="{TemplateBinding LaunchVersion}"  -->
+                        <!--  FontSize="14"  -->
+                        <!--  FontWeight="Medium" />  -->
+                    </StackPanel>
+                    <TextBlock
+                        FontSize="{TemplateBinding FontSize}"
+                        FontWeight="Black"
+                        Foreground="{TemplateBinding Foreground}"
+                        Text="{TemplateBinding ProfileName}"
+                        TextWrapping="Wrap" />
+
+                    <TextBlock
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Foreground="{DynamicResource ContentColor}"
+                        LineHeight="25"
+                        MaxWidth="{TemplateBinding MaxWidth}"
+                        Text="{TemplateBinding ProfileDescription}"
+                        TextWrapping="Wrap" />
+
+                    <!--  <TextBlock Text="{TemplateBinding CreateDate}"  -->
+                    <!--  Foreground="{DynamicResource ContentColor}"  -->
+                    <!--  FontWeight="Medium"  -->
+                    <!--  LineHeight="25"  -->
+                    <!--  TextWrapping="Wrap"  -->
+                    <!--  FontSize="14" />  -->
+
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <controls:GmlButton
+                            Classes="TextIcon Primary"
+                            Command="{TemplateBinding PlayCommand}"
+                            FontSize="16"
+                            IconPath="/Assets/Images/login.svg"
+                            IconSize="24"
+                            Text="{x:Static lang:Resources.Play}" />
+
+                        <controls:GmlButton
+                            Classes="TextIcon Secondary"
+                            Command="{TemplateBinding SettingsCommand}"
+                            FontSize="16"
+                            IconPath="/Assets/Images/settings.svg"
+                            IconSize="24"
+                            Text="{x:Static lang:Resources.Settings}" />
+
+                        <!--  <controls:GmlButton Classes="TextIcon Secondary"  -->
+                        <!--  Command="{TemplateBinding GoModsCommand}"  -->
+                        <!--  IconPath="/Assets/Images/document.svg"  -->
+                        <!--  IconSize="24"  -->
+                        <!--  FontSize="16"  -->
+                        <!--  IsVisible="{TemplateBinding IsModsButtonVisible}"  -->
+                        <!--  IsEnabled="{TemplateBinding BackendIsNotOffline}"  -->
+                        <!--  Text="{x:Static lang:Resources.ModsList}" />  -->
+                    </StackPanel>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

@@ -1,0 +1,74 @@
+<Window
+    Background="Transparent"
+    CanResize="True"
+    Closed="WindowClosed"
+    ExtendClientAreaToDecorationsHint="True"
+    Height="650"
+    Icon="/Assets/Images/logo.ico"
+    MinHeight="650"
+    MinWidth="1000"
+    Title="Orlion"
+    TransparencyBackgroundFallback="Transparent"
+    TransparencyLevelHint="AcrylicBlur"
+    Width="1000"
+    WindowStartupLocation="CenterScreen"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="Gml.Launcher.Views.MainWindow"
+    x:DataType="vm:MainWindowViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:components="clr-namespace:Gml.Launcher.Views.Components"
+    xmlns:controls="clr-namespace:GamerVII.Notification.Avalonia.Controls;assembly=GamerVII.Notification.Avalonia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="clr-namespace:Gml.Launcher.Core.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+    xmlns:vm="using:Gml.Launcher.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <Border ClipToBounds="True" CornerRadius="5">
+            <Panel>
+                <ExperimentalAcrylicBorder IsHitTestVisible="False">
+                    <ExperimentalAcrylicBorder.Material>
+                        <ExperimentalAcrylicMaterial
+                            BackgroundSource="Digger"
+                            MaterialOpacity="0.85"
+                            TintColor="Black"
+                            TintOpacity=".9" />
+                    </ExperimentalAcrylicBorder.Material>
+                </ExperimentalAcrylicBorder>
+
+                <Grid>
+                    <!--  Background  -->
+                    <components:BackgroundComponent Classes="Image" Source="/Assets/Images/background.jpg" />
+
+                    <Rectangle Fill="{DynamicResource BackgroundOverlay}" />
+
+
+                    <!--  Content  -->
+                    <rxui:RoutedViewHost Router="{Binding Router}">
+
+                        <rxui:RoutedViewHost.DefaultContent>
+                            <TextBlock
+                                Foreground="White"
+                                HorizontalAlignment="Center"
+                                Text="Route not found"
+                                VerticalAlignment="Center" />
+                        </rxui:RoutedViewHost.DefaultContent>
+                        <rxui:RoutedViewHost.ViewLocator>
+                            <helpers:AppViewLocator />
+                        </rxui:RoutedViewHost.ViewLocator>
+                    </rxui:RoutedViewHost>
+
+                </Grid>
+            </Panel>
+        </Border>
+
+        <!--  MessageBar  -->
+        <controls:NotificationMessageContainer Manager="{Binding Manager}" />
+
+    </Grid>
+
+</Window>

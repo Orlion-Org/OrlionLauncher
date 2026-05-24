@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{09A802
 		.gitmodules = .gitmodules
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gml.Launcher", "src\Gml.Launcher\Gml.Launcher.csproj", "{F2771E71-C782-4713-862F-217694DDDFF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orlion", "src\Orlion\Orlion.csproj", "{F2771E71-C782-4713-862F-217694DDDFF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{53569526-A495-4E84-ADF3-83D2188318AB}"
 EndProject

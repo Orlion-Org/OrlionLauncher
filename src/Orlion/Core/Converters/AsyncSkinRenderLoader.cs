@@ -65,7 +65,7 @@ public class AsyncSkinRenderLoader
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.UserAgent.ParseAdd(
-                $"Gml.Launcher-Client-{nameof(GmlClientManager)}/1.0 (OS: {Environment.OSVersion};)");
+                $"Orlion-Client-{nameof(GmlClientManager)}/1.0 (OS: {Environment.OSVersion};)");
             var response = await client.GetByteArrayAsync(url, cts.Token);
             using var stream = new MemoryStream(response);
 
