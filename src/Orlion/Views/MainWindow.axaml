@@ -28,7 +28,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Grid>
-        <Border ClipToBounds="True" CornerRadius="5">
+        <Border
+            Background="{DynamicResource BackgroundColor}"
+            ClipToBounds="True"
+            CornerRadius="5">
             <Panel>
                 <ExperimentalAcrylicBorder IsHitTestVisible="False">
                     <ExperimentalAcrylicBorder.Material>
@@ -41,9 +44,6 @@
                 </ExperimentalAcrylicBorder>
 
                 <Grid>
-                    <!--  Background  -->
-                    <components:BackgroundComponent Classes="Image" Source="/Assets/Images/background.jpg" />
-
                     <Rectangle Fill="{DynamicResource BackgroundOverlay}" />
 
 

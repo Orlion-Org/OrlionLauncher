@@ -1,11 +1,12 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:components="clr-namespace:Gml.Launcher.Views.Components">
+﻿<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:components="clr-namespace:Gml.Launcher.Views.Components"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.PreviewWith>
         <components:StackFrameBorder Padding="20">
             <TextBox Text="Поле для ввода" />
-            <TextBox Text="For" Classes="FormBox" />
+            <TextBox Classes="FormBox" Text="For" />
         </components:StackFrameBorder>
     </Design.PreviewWith>
 
@@ -74,7 +75,7 @@
     </Style>
 
     <Style Selector="ProgressBar.ProgressBar">
-        <Setter Property="Background" Value="{DynamicResource FormBorderColor}" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}" />
     </Style>
 

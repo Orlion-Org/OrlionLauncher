@@ -1,12 +1,12 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="using:Gml.Launcher.Views.Components">
+﻿<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:Gml.Launcher.Views.Components"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.PreviewWith>
-        <Border Background="{StaticResource BackgroundColor}"
-                Padding="20">
+        <Border Background="{StaticResource BackgroundColor}" Padding="20">
             <StackPanel Spacing="20">
-                <StackPanel Spacing="10" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" Spacing="10">
                     <controls:GmlButton Classes="Icon Secondary" />
                     <controls:GmlButton Classes="Icon Primary" />
                     <controls:GmlButton Classes="Icon Additional" />
@@ -37,19 +37,21 @@
 
         <Setter Property="Template">
             <ControlTemplate>
-                <Button Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        CommandParameter="{TemplateBinding CommandParameter}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        Padding="{TemplateBinding Padding}"
-                        IsDefault="{TemplateBinding IsDefault}"
-                        Command="{TemplateBinding Command}"
-                        CornerRadius="{TemplateBinding CornerRadius}"
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}">
-                    <Svg Path="{TemplateBinding IconPath}"
-                         Width="{TemplateBinding IconSize}"
-                         Height="{TemplateBinding IconSize}" />
+                <Button
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Command="{TemplateBinding Command}"
+                    CommandParameter="{TemplateBinding CommandParameter}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Height="{TemplateBinding Height}"
+                    IsDefault="{TemplateBinding IsDefault}"
+                    Padding="{TemplateBinding Padding}"
+                    Width="{TemplateBinding Width}">
+                    <Svg
+                        Height="{TemplateBinding IconSize}"
+                        Path="{TemplateBinding IconPath}"
+                        Width="{TemplateBinding IconSize}" />
                 </Button>
             </ControlTemplate>
         </Setter>
@@ -63,27 +65,29 @@
 
         <Setter Property="Template">
             <ControlTemplate>
-                <Button Name="PART_Button"
-                        Background="{TemplateBinding Background}"
-                        Command="{TemplateBinding Command}"
-                        CommandParameter="{TemplateBinding CommandParameter}"
-                        Padding="{TemplateBinding Padding}"
-                        IsDefault="{TemplateBinding IsDefault}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{TemplateBinding CornerRadius}"
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}">
+                <Button
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Command="{TemplateBinding Command}"
+                    CommandParameter="{TemplateBinding CommandParameter}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Height="{TemplateBinding Height}"
+                    IsDefault="{TemplateBinding IsDefault}"
+                    Name="PART_Button"
+                    Padding="{TemplateBinding Padding}"
+                    Width="{TemplateBinding Width}">
 
-                    <StackPanel Orientation="Horizontal"
-                                Spacing="{TemplateBinding Spacing}">
-                        <Svg Path="{TemplateBinding IconPath}"
-                             Width="{TemplateBinding IconSize}"
-                             Height="{TemplateBinding IconSize}" />
-                        <TextBlock Text="{TemplateBinding Text}"
-                                   VerticalAlignment="Center"
-                                   FontWeight="{TemplateBinding FontWeight}"
-                                   Foreground="{DynamicResource HeadlineColor}" />
+                    <StackPanel Orientation="Horizontal" Spacing="{TemplateBinding Spacing}">
+                        <Svg
+                            Height="{TemplateBinding IconSize}"
+                            Path="{TemplateBinding IconPath}"
+                            Width="{TemplateBinding IconSize}" />
+                        <TextBlock
+                            FontWeight="{TemplateBinding FontWeight}"
+                            Foreground="{DynamicResource HeadlineColor}"
+                            Text="{TemplateBinding Text}"
+                            VerticalAlignment="Center" />
                     </StackPanel>
                 </Button>
             </ControlTemplate>
@@ -99,21 +103,23 @@
 
         <Setter Property="Template">
             <ControlTemplate>
-                <Button Name="PART_Button"
-                        Background="{TemplateBinding Background}"
-                        Command="{TemplateBinding Command}"
-                        CommandParameter="{TemplateBinding CommandParameter}"
-                        Padding="{TemplateBinding Padding}"
-                        IsDefault="{TemplateBinding IsDefault}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{TemplateBinding CornerRadius}"
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}">
-                    <TextBlock Text="{TemplateBinding Text}"
-                               VerticalAlignment="Center"
-                               FontWeight="{TemplateBinding FontWeight}"
-                               Foreground="{DynamicResource HeadlineColor}" />
+                <Button
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Command="{TemplateBinding Command}"
+                    CommandParameter="{TemplateBinding CommandParameter}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    Height="{TemplateBinding Height}"
+                    IsDefault="{TemplateBinding IsDefault}"
+                    Name="PART_Button"
+                    Padding="{TemplateBinding Padding}"
+                    Width="{TemplateBinding Width}">
+                    <TextBlock
+                        FontWeight="{TemplateBinding FontWeight}"
+                        Foreground="{DynamicResource HeadlineColor}"
+                        Text="{TemplateBinding Text}"
+                        VerticalAlignment="Center" />
                 </Button>
             </ControlTemplate>
         </Setter>

@@ -105,14 +105,14 @@
                     Grid.ColumnSpan="3"
                     Grid.Row="4">
 
-                    <components:GmlButton
-                        Classes="TextIcon Additional"
-                        Command="{Binding OpenLinkCommand}"
-                        CommandParameter="https://vk.com/recloud.studio"
-                        Grid.Column="0"
-                        IconPath="/Assets/Images/document.svg"
-                        IconSize="22"
-                        Text="{x:Static lang:Resources.ModsList}" />
+                    <!--  <components:GmlButton  -->
+                    <!--  Classes="TextIcon Additional"  -->
+                    <!--  Command="{Binding OpenLinkCommand}"  -->
+                    <!--  CommandParameter="https://vk.com/recloud.studio"  -->
+                    <!--  Grid.Column="0"  -->
+                    <!--  IconPath="/Assets/Images/document.svg"  -->
+                    <!--  IconSize="22"  -->
+                    <!--  Text="{x:Static lang:Resources.ModsList}" />  -->
 
                     <StackPanel
                         Grid.Column="2"
