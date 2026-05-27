@@ -11,10 +11,6 @@ public class SidebarComponent : TemplatedControl
         AvaloniaProperty.Register<SidebarComponent, bool>(
             nameof(IsBackendInactive), false);
 
-    public static readonly StyledProperty<ICommand> ProfileCommandProperty =
-        AvaloniaProperty.Register<SidebarComponent, ICommand>(
-            nameof(ProfileCommand));
-
     public static readonly StyledProperty<ICommand> LogoutCommandProperty =
         AvaloniaProperty.Register<SidebarComponent, ICommand>(
             nameof(LogoutCommand));
@@ -22,16 +18,6 @@ public class SidebarComponent : TemplatedControl
     public static readonly StyledProperty<ListViewModel> ListViewModelProperty =
         AvaloniaProperty.Register<SidebarComponent, ListViewModel>(
             nameof(ListViewModel));
-
-    public static readonly StyledProperty<ICommand> HomeCommandProperty =
-        AvaloniaProperty.Register<SidebarComponent, ICommand>(
-            nameof(HomeCommand));
-
-    public ICommand HomeCommand
-    {
-        get => GetValue(HomeCommandProperty);
-        set => SetValue(HomeCommandProperty, value);
-    }
 
     public bool IsBackendInactive
     {
@@ -48,11 +34,5 @@ public class SidebarComponent : TemplatedControl
     {
         get => GetValue(LogoutCommandProperty);
         set => SetValue(LogoutCommandProperty, value);
-    }
-
-    public ICommand ProfileCommand
-    {
-        get => GetValue(ProfileCommandProperty);
-        set => SetValue(ProfileCommandProperty, value);
     }
 }

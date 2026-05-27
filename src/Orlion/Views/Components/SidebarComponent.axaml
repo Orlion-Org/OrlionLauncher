@@ -31,20 +31,6 @@
                             Spacing="10"
                             VerticalAlignment="Center">
 
-                            <!--  <controls:GmlButton Classes="Icon Secondary"  -->
-                            <!--  Command="{TemplateBinding HomeCommand}"  -->
-                            <!--  Width="60"  -->
-                            <!--  Height="60"  -->
-                            <!--  IconPath="/Assets/Images/home.svg"  -->
-                            <!--  IconSize="22" />  -->
-
-                            <!--  <controls:GmlButton Classes="Icon Secondary"  -->
-                            <!--  Command="{TemplateBinding ProfileCommand}"  -->
-                            <!--  Width="60"  -->
-                            <!--  Height="60"  -->
-                            <!--  IconPath="/Assets/Images/profile.svg"  -->
-                            <!--  IconSize="24" />  -->
-
                             <controls:ServerListComponent DataContext="{TemplateBinding ListViewModel}" />
 
                         </StackPanel>
