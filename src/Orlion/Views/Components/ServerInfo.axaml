@@ -79,15 +79,6 @@
                             IconPath="/Assets/Images/settings.svg"
                             IconSize="24"
                             Text="{x:Static lang:Resources.Settings}" />
-
-                        <!--  <controls:GmlButton Classes="TextIcon Secondary"  -->
-                        <!--  Command="{TemplateBinding GoModsCommand}"  -->
-                        <!--  IconPath="/Assets/Images/document.svg"  -->
-                        <!--  IconSize="24"  -->
-                        <!--  FontSize="16"  -->
-                        <!--  IsVisible="{TemplateBinding IsModsButtonVisible}"  -->
-                        <!--  IsEnabled="{TemplateBinding BackendIsNotOffline}"  -->
-                        <!--  Text="{x:Static lang:Resources.ModsList}" />  -->
                     </StackPanel>
                 </StackPanel>
             </ControlTemplate>

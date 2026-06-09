@@ -92,19 +92,6 @@ public class OverviewPageViewModel : PageViewModelBase
                            ?? Locator.Current.GetService<ISettingsService>()
                            ?? throw new ServiceNotFoundException(typeof(ISettingsService));
 
-        GoProfileCommand = ReactiveCommand.CreateFromObservable(
-            () => screen.Router.Navigate.Execute(new ProfilePageViewModel(screen, User, _gmlManager))
-        );
-
-        GoModsCommand = ReactiveCommand.CreateFromObservable(
-            () => screen.Router.Navigate.Execute(new ModsPageViewModel(
-                screen,
-                ListViewModel.SelectedProfile!,
-                User,
-                _gmlManager,
-                _systemService))
-        );
-
         GoSettingsCommand = ReactiveCommand.CreateFromObservable(
             () => screen.Router.Navigate.Execute(new SettingsPageViewModel(
                 screen,

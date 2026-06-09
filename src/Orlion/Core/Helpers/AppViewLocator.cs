@@ -11,7 +11,6 @@ public class AppViewLocator : IViewLocator
     {
         return viewModel switch
         {
-            ModsPageViewModel context => new ModsPageView { DataContext = context },
             OverviewPageViewModel context => new OverviewPageView { DataContext = context },
             SettingsPageViewModel context => new SettingsPageView { DataContext = context },
             LoginPageViewModel context => new LoginPageView { DataContext = context },
